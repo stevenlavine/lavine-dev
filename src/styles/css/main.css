@@ -1,0 +1,15 @@
+.page-wrapper {
+
+}
+.hero {
+  @apply relative h-[75vh] flex flex-row items-center lg:px-16;
+  & .hero-inner {
+    @apply lg:max-w-[40vw];
+    & h1 {
+      @apply text-4xl font-bold mb-4;
+      & span {
+        @apply text-2xl font-normal block;
+      }
+    }
+  }
+}

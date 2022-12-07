@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface PageTitleInterface {
   id: number;
   largeText: string;
@@ -77,4 +79,7 @@ export interface SocialMetaInterface {
   title: string;
   description: string;
   image: MediaInterface;
+}
+export interface LayoutInterface {
+  children: React.ReactNode;
 }
