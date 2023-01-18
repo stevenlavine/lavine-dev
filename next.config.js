@@ -10,7 +10,14 @@ const nextConfig = {
         port: '1338',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'dba.lavine.dev',
+        port: '443',
+        pathname: '/**',
+      },
     ],
+    unoptimized: false,
   },
   webpack(config) {
     config.module.rules.push({
