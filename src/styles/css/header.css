@@ -1,0 +1,45 @@
+header {
+  @apply fixed w-full top-0 left-0 z-10 px-8 backdrop-blur-sm bg-blue-950/70 shadow-[0_10px_20px_-10px_rgba(0,0,0,0.8)];
+  transition: all 0.3s;
+  &.up {
+    @apply top-0;
+  }
+  &.down {
+    top: -80px;
+  }
+  & nav {
+    @apply flex flex-row items-center justify-between;
+    & .menu {
+      @apply md:h-auto p-4 md:p-0;
+      & > span {
+        @apply relative block before:block before:content-[""] before:absolute before:top-0 before:left-0 before:w-full before:h-[3px] before:bg-white after:block after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-white h-[30px] w-[30px] md:hidden;
+      }
+      & ol {
+        @apply fixed left-full md:static md:flex md:flex-row;
+        counter-reset: navList;
+        & li {
+          @apply mx-2 py-4 font-mono text-sm text-blue-400;
+          &:before {
+            @apply text-xs text-teal-400;
+            counter-increment: navList;
+            content: counter(navList, decimal-leading-zero) ". ";
+          }
+          &:hover, &.active {
+            @apply text-teal-400;
+          }
+        }
+      }
+    }
+  }
+  & .logo {
+    @apply text-white py-2;
+    & svg {
+      min-height: 60px;
+    }
+  }
+}
+.is-loading {
+  & header {
+    top: -80px;
+  }
+}

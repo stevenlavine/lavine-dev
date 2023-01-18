@@ -4,6 +4,7 @@ export interface PageTitleInterface {
   id: number;
   largeText: string;
   smallText: string;
+  subTitle: string;
 }
 export interface FetchPageProps {
   token: string;
@@ -19,8 +20,16 @@ export interface HomeProps {
 }
 export interface HomePageInterface {
   introduction: string;
+  heroImage: MediaDataInterface;
   pageTitle: PageTitleInterface;
   metaData?: SeoMetaInterface;
+  aboutMe: AboutMeInterface;
+  work: WorkInterface;
+}
+export interface MediaDataInterface {
+  data: {
+    attributes: MediaInterface;
+  };
 }
 export interface MediaInterface {
   id: number;
@@ -29,7 +38,7 @@ export interface MediaInterface {
   caption: string;
   width?: number;
   height?: number;
-  formats?: MediaFormatsInterface;
+  formats: MediaFormatsInterface;
   hash: string;
   ext: string;
   mime: string;
@@ -82,4 +91,59 @@ export interface SocialMetaInterface {
 }
 export interface LayoutInterface {
   children: React.ReactNode;
+}
+export interface AboutMeInterface {
+  id?: number;
+  heading: string;
+  biography: string;
+  image: {
+    data: {
+      id: number;
+      attributes: MediaInterface;
+    };
+  };
+  skills: SkillInterface[];
+  isMobile: boolean;
+}
+export interface SkillInterface {
+  id: number;
+  skill: string;
+}
+export interface WorkInterface {
+  id: number;
+  heading: string;
+  introduction: string;
+  projects: ProjectDataInterface;
+}
+export interface ProjectDataInterface {
+  data: [
+    {
+      attributes: ProjectInterface;
+    }
+  ];
+}
+export interface ProjectInterface {
+  id: number;
+  name: string;
+  description: string;
+  url?: string;
+  tags: TagsDataInterface;
+  agency: AgencyInterface;
+  updatedAt: string;
+}
+export interface AgencyInterface {
+  id: number;
+  name: string;
+  url: string;
+}
+export interface TagsDataInterface {
+  data: [
+    {
+      attributes: TagInterface;
+    }
+  ];
+}
+export interface TagInterface {
+  id: number;
+  name: string;
 }

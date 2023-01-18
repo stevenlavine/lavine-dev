@@ -30,15 +30,7 @@ export default class MyDocument extends Document {
             color="#000000"
           />
           <link rel="shortcut icon" href="/favicon/favicon.ico" />
-          {/*<script*/}
-          {/*  src="https://kit.fontawesome.com/3b1ebc1c0c.js"*/}
-          {/*  async*/}
-          {/*  crossOrigin="anonymous"*/}
-          {/*/>*/}
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-          />
+          <link rel="stylesheet" href="https://use.typekit.net/ehh6prr.css" />
           <meta name="emotion-insertion-point" content="" />
           <meta name="msapplication-TileColor" content="#00243F" />
           <meta

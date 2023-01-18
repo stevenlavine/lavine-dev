@@ -1,0 +1,41 @@
+.skills {
+  @apply py-2;
+  & ul {
+    @apply text-white grid grid-cols-2 px-2 -mx-4;
+    & li {
+      @apply m-2;
+    }
+  }
+}
+.projects-list {
+  @apply flex flex-row flex-wrap pt-8 -mx-4 -my-4;
+  & .project-item {
+    @apply w-[320px] p-4 pt-12 bg-navy-base shadow-2xl shadow-navy-shadow/70 relative m-4 flex flex-col;
+    transition: transform 0.3s;
+    & .external-link {
+      @apply absolute top-4 right-4 text-xl;
+    }
+    & .icon {
+      @apply text-xl absolute top-5 left-4 text-blue-100;
+    }
+    & h4 {
+      @apply text-teal-400 mb-4 text-xl font-bold;
+    }
+    & h5 {
+      @apply my-4 text-blue-200 font-semibold uppercase;
+      & a, & span {
+        @apply font-normal capitalize text-teal-400;
+      }
+    }
+    &:hover {
+      transform: translateY(-20px);
+    }
+  }
+
+}
+.tag-list {
+  @apply flex flex-row flex-wrap -mx-2;
+  & > li {
+    @apply mx-2 text-gray-400 text-xs font-mono;
+  }
+}
