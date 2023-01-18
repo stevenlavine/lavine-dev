@@ -14,46 +14,44 @@ const Header = () => {
           <Logo />
         </div>
         <div className="menu">
-          <ul>
-            <ol>
-              <li className={`${selected === 'about' ? 'active' : ''}`}>
-                <Link
-                  href="/#about"
-                  onClick={() => setSelected('about')} // Set the onclick event
-                  scroll={false} // Disable the default scroll to top of page functionality
-                >
-                  About Me
-                </Link>
-              </li>
-              <li className={`${selected === 'projects' ? 'active' : ''}`}>
-                <Link
-                  href="/#projects"
-                  onClick={() => setSelected('projects')} // Set the onclick event
-                  scroll={false} // Disable the default scroll to top of page functionality
-                >
-                  Projects
-                </Link>
-              </li>
-              {/*<li className={`${selected === 'blog' ? 'active' : ''}`}>*/}
-              {/*  <Link*/}
-              {/*    href="/#blog"*/}
-              {/*    onClick={() => setSelected('blog')} // Set the onclick event*/}
-              {/*    scroll={false} // Disable the default scroll to top of page functionality*/}
-              {/*  >*/}
-              {/*    Blog*/}
-              {/*  </Link>*/}
-              {/*</li>*/}
-              <li className={`${selected === 'contact' ? 'active' : ''}`}>
-                <Link
-                  href="/#contact"
-                  onClick={() => setSelected('contact')} // Set the onclick event
-                  scroll={false} // Disable the default scroll to top of page functionality
-                >
-                  Contact Me
-                </Link>
-              </li>
-            </ol>
-          </ul>
+          <ol>
+            <li className={`${selected === 'about' ? 'active' : ''}`}>
+              <Link
+                href="/#about"
+                onClick={() => setSelected('about')} // Set the onclick event
+                scroll={false} // Disable the default scroll to top of page functionality
+              >
+                About Me
+              </Link>
+            </li>
+            <li className={`${selected === 'projects' ? 'active' : ''}`}>
+              <Link
+                href="/#projects"
+                onClick={() => setSelected('projects')} // Set the onclick event
+                scroll={false} // Disable the default scroll to top of page functionality
+              >
+                Projects
+              </Link>
+            </li>
+            {/*<li className={`${selected === 'blog' ? 'active' : ''}`}>*/}
+            {/*  <Link*/}
+            {/*    href="/#blog"*/}
+            {/*    onClick={() => setSelected('blog')} // Set the onclick event*/}
+            {/*    scroll={false} // Disable the default scroll to top of page functionality*/}
+            {/*  >*/}
+            {/*    Blog*/}
+            {/*  </Link>*/}
+            {/*</li>*/}
+            <li className={`${selected === 'contact' ? 'active' : ''}`}>
+              <Link
+                href="/#contact"
+                onClick={() => setSelected('contact')} // Set the onclick event
+                scroll={false} // Disable the default scroll to top of page functionality
+              >
+                Contact Me
+              </Link>
+            </li>
+          </ol>
         </div>
       </nav>
     </header>
