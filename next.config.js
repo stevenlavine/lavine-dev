@@ -13,7 +13,6 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'dba.lavine.dev',
-        port: '',
         pathname: '/**',
       },
     ],
